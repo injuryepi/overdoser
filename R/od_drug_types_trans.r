@@ -1,5 +1,6 @@
 od_drug_types_trans <- function(data, diag_ecode_col, date){
 
+	date <- enquo(date)
 
 	data1 <- data %>% 
 		filter(od_fed_fiscal_year(date) < 2016) %>% 
