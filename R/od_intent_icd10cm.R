@@ -10,16 +10,16 @@ od_intent_icd10cm <- function(data, diag_ecode_col){
 
 	data %>%
 		mutate(unintentional_drugs_icd10cm =
-					 	create_diag(., expr = unintentional_drugs_icd10cm_regex_,
+					 	od_create_diag(., expr = unintentional_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col),
 					 self_harm_drugs_icd10cm =
-					 	create_diag(., expr = self_harm_drugs_icd10cm_regex_,
+					 	od_create_diag(., expr = self_harm_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col),
 					 assault_drugs_icd10cm =
-					 	create_diag(., expr = assault_drugs_icd10cm_regex_,
+					 	od_create_diag(., expr = assault_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col),
 					 undetermined_drugs_icd10cm =
-					 	create_diag(., expr = undetermined_drugs_icd10cm_regex_,
+					 	od_create_diag(., expr = undetermined_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col)) %>%
 					 	mutate(intent_drugs = ifelse(
 					 		unintentional_drugs_icd10cm == 1, 1,
