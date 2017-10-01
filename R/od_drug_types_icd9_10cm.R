@@ -10,16 +10,16 @@ od_drug_types_icd9_10cm <- function(data, diag_ecode_col){
 
 	data %>%
 		mutate(any_drug_icd9_10cm =
-					 	create_diag(., expr = cdc_drugs_icd9_10cm_regex_,
+					 	od_create_diag(., expr = cdc_drugs_icd9_10cm_regex_,
 					 							colvec = diag_ecode_col),
 					 any_opioid_icd9_10cm =
-					 	create_diag(., expr = cdc_opioid_icd9_10cm_regex_,
+					 	od_create_diag(., expr = cdc_opioid_icd9_10cm_regex_,
 					 							colvec = diag_ecode_col),
 					 non_heroin_icd9_10cm =
-					 	create_diag(., expr = cdc_non_heroin_icd9_10cm_regex_,
+					 	od_create_diag(., expr = cdc_non_heroin_icd9_10cm_regex_,
 					 							colvec = diag_ecode_col),
 					 heroin_icd9_10cm =
-					 	create_diag(., expr = cdc_heroin_icd9_10cm_regex_,
+					 	od_create_diag(., expr = cdc_heroin_icd9_10cm_regex_,
 					 							colvec = diag_ecode_col)
 		)
 }
