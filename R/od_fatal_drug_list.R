@@ -1,12 +1,12 @@
 #' Add selected drug overdose as defined by CDC using ICD-10
 #'
-#' cdc_any_drugs: Any drug overdose death, 
-#' that is an underlying cause-of-death ICD-10 codes of 
+#' cdc_any_drugs: Any drug overdose death,
+#' that is an underlying cause-of-death ICD-10 codes of
 #' X40–X44, X60–X64, X85, and Y10–Y14.
-#' The following specific drug overdose deaths are drug overdose deaths 
-#' (defined in cdc_any_drugs) that involved the specified ICD-10 codes 
+#' The following specific drug overdose deaths are drug overdose deaths
+#' (defined in cdc_any_drugs) that involved the specified ICD-10 codes
 #' in the multiple-cause-of-death fields
-#' cdc_any_opioid: Any opioid death with 
+#' cdc_any_opioid: Any opioid death with
 #' T40.0, T40.1, T40.2, T40.3, T40.4, or T40.6
 #' cdc_heroin_t40_1: Heroin death with T40.1
 #' cdc_opioid_t40_2: Natural and semisynthetic opioids (T40.2)
@@ -20,7 +20,8 @@
 #' @param underly_col The column index for the with the ICD-10 underlying cause of death
 #' @param mult_col The column indices of the multiple-cause-of-death codes
 #'
-#' @return The original dataset with the added drug fields. 1 means drug present and 0 otherwise
+#' @return The original dataset with the added drug fields.
+#' 1 means drug present and 0 otherwise
 #' @export
 #'
 #' @examples Examples will be added later
