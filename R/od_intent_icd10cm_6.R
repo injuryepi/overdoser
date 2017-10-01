@@ -15,34 +15,34 @@ od_intent_icd10cm_6 <- function(data, diag_ecode_col){
 
 
 	data %>%
-		mutate(unintentional_drugs_icd10cm =
+		mutate(unintentional_drugs_icd10cm_6 =
 					 	od_create_diag(., expr = unintentional_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col),
-					 self_harm_drugs_icd10cm =
+					 self_harm_drugs_icd10cm_6 =
 					 	od_create_diag(., expr = self_harm_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col),
-					 assault_drugs_icd10cm =
+					 assault_drugs_icd10cm_6 =
 					 	od_create_diag(., expr = assault_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col),
-					 undetermined_drugs_icd10cm =
+					 undetermined_drugs_icd10cm_6 =
 					 	od_create_diag(., expr = undetermined_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col),
-					 adverse_effect_drugs_icd10cm =
+					 adverse_effect_drugs_icd10cm_6 =
 					 	od_create_diag(., expr = adverse_effect_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col),
-					 underdosing_drugs_icd10cm =
+					 underdosing_drugs_icd10cm_6 =
 					 	od_create_diag(., expr = underdosing_drugs_icd10cm_regex_,
 					 							colvec = diag_ecode_col)) %>%
 					 	mutate(intent_drugs6 = ifelse(
-					 		unintentional_drugs_icd10cm == 1, 1,
-					 		ifelse(self_harm_drugs_icd10cm == 1, 2,
-					 		ifelse(assault_drugs_icd10cm == 1, 3,
-					 		ifelse(undetermined_drugs_icd10cm == 1, 4,
-					 		ifelse(adverse_effect_drugs_icd10cm == 1, 5,
-					 		ifelse(underdosing_drugs_icd10cm == 1, 6, NA))))))) %>%
-		select(-unintentional_drugs_icd10cm, -self_harm_drugs_icd10cm,
-					 -assault_drugs_icd10cm, -undetermined_drugs_icd10cm,
-					 adverse_effect_drugs_icd10cm, underdosing_drugs_icd10cm)
+					 		unintentional_drugs_icd10cm_6 == 1, 1,
+					 		ifelse(self_harm_drugs_icd10cm_6 == 1, 2,
+					 		ifelse(assault_drugs_icd10cm_6 == 1, 3,
+					 		ifelse(undetermined_drugs_icd10cm_6 == 1, 4,
+					 		ifelse(adverse_effect_drugs_icd10cm_6 == 1, 5,
+					 		ifelse(underdosing_drugs_icd10cm_6 == 1, 6, NA))))))) %>%
+		select(-unintentional_drugs_icd10cm_6, -self_harm_drugs_icd10cm_6,
+					 -assault_drugs_icd10cm_6, -undetermined_drugs_icd10cm_6,
+					 - adverse_effect_drugs_icd10cm_6, - underdosing_drugs_icd10cm_6)
 }
 
 
