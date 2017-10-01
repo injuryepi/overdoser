@@ -1,4 +1,4 @@
-od_intent_icd10cm <- function(data, diag_ecode_col){
+od_intent_icd10cm_6 <- function(data, diag_ecode_col){
 
 	unintentional_drugs_icd10cm_regex_ <- "(?!(T3[679]9|T414|T427|T4[3579]9))(T3[6-9]|T4[0-9]|T50)..(1)|((T3[679]9|T414|T427|T4[3579]9)(1))"
 
