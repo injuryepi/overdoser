@@ -14,8 +14,7 @@ od_fatal_drug_list(data, underly_col, mult_col)
 \item{mult_col}{The column indices of the multiple-cause-of-death codes}
 }
 \value{
-The original dataset with the added drug fields.
-1 means drug present and 0 otherwise
+The original dataset with the added drug fields.1 means drug present and 0 otherwise
 }
 \description{
 cdc_any_drugs: Any drug overdose death,
