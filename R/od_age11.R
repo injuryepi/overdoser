@@ -1,12 +1,14 @@
-#' Title
+#' Title Make an eleven-category age grouping
 #'
 #' @param data: input data
 #' @param age: age in years
 #'
-#' @return new variables of 11 age groups agegrp11 and age11
+#' @return Age groups agegrp11(numeric) and age11(character)
 #' @export
 #'
 #' @examples
+#' library(tidyverse)
+#' hosp_set %>% od_age11(age = age) %>% sample_n(5)
 od_age11 <- function(data, age){
 
 	suppressWarnings(suppressMessages(require(classInt)))

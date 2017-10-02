@@ -2,7 +2,7 @@
 % Please edit documentation in R/od_age11.R
 \name{od_age11}
 \alias{od_age11}
-\title{Title}
+\title{Title Make an eleven-category age grouping}
 \usage{
 od_age11(data, age)
 }
@@ -12,8 +12,12 @@ od_age11(data, age)
 \item{age:}{age in years}
 }
 \value{
-new variables of 11 age groups agegrp11 and age11
+Age groups agegrp11(numeric) and age11(character)
 }
 \description{
-Title
+Title Make an eleven-category age grouping
+}
+\examples{
+library(tidyverse)
+hosp_set \%>\% od_age11(age = age) \%>\% sample_n(5)
 }

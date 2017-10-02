@@ -2,29 +2,26 @@
 % Please edit documentation in R/od_drug_types_trans.r
 \name{od_drug_types_trans}
 \alias{od_drug_types_trans}
-\title{Title}
+\title{Add new drug variables based on both ICD-9-CM and ICD-10-CM}
 \usage{
 od_drug_types_trans(data, diag_ecode_col, date)
 }
 \arguments{
 \item{data:}{the input dataset}
 
-\item{diag_ecode_col:}{indices(numeric) of diagnosis
-and E codes of interest}
+\item{diag_ecode_col:}{indices(numeric) of diagnosis and E codes of interest}
 
 \item{date:}{date of discharge}
 }
 \value{
-additional variables: any_drug, any_opioid,
-non_heroin_opioid , heroin
+additional variables: any_drug, any_opioid, non_heroin_opioid ,
+  heroin
 }
 \description{
-Title
+Add new drug variables based on both ICD-9-CM and ICD-10-CM
 }
 \examples{
 hosp_set \%>\%
-od_drug_types_trans(diag_ecode_col = c(3, 6),
-date = discharge_date) \%>\%
-select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) \%>\% sample_n(10)
+od_drug_types_trans(diag_ecode_col = c(3, 6), date = discharge_date) \%>\% select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) \%>\% sample_n(10)
 
 }

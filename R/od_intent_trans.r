@@ -1,10 +1,12 @@
 #' Title
 #'
-#' @param data
-#' @param diag_ecode_col
-#' @param date
+#' @param data: input data
+#' @param diag_ecode_col numeric vector of the
+#' selected diagnosis and E codes
+#' @param date: date of discharge
 #'
-#' @return intent_drugs
+#' @return intent_drugs with values 1, 2, 3, 4 for
+#' unintentional, self-harm, assault and undetermined
 #' @export
 #'
 #' @examples

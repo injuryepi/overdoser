@@ -7,10 +7,16 @@
 od_intent_trans(data, diag_ecode_col, date)
 }
 \arguments{
-\item{date}{}
+\item{diag_ecode_col}{numeric vector of the
+selected diagnosis and E codes}
+
+\item{data:}{input data}
+
+\item{date:}{date of discharge}
 }
 \value{
-intent_drugs
+intent_drugs with values 1, 2, 3, 4 for
+unintentional, self-harm, assault and undetermined
 }
 \description{
 Title
