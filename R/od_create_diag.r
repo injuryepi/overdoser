@@ -1,15 +1,24 @@
 #' Title
 #'
-#' @param data
-#' @param expr
-#' @param colvec
+#' @param data: input data
+#' @param expr: regular expression describing
+#' the pattern of interest
+#' @param colvec: indices of variables of interest
 #' @param ignore.case
 #' @param perl
 #'
-#' @return
+#' @return new variable matching the pattern
+#' described in the regular expression
 #' @export
 #'
 #' @examples
+#' heroin_icd9cm_regex_ <- "^96501|^E8500"
+#' library(tidyverse)
+#' 	hosp_net %>%
+#' 	filter(year == 2015) %>%
+#' 	od_create_diag(expr = heroin_icd9cm_regex_,
+#' 	colvec = c(1:5)) %>% sample_n(10)
+#'
 od_create_diag <- function(data, expr, colvec, ignore.case = T, perl = T){
 	#regexp=regular expressions for the data
 	# colvec = vector of the columns of interest (columns with the diagnoses)

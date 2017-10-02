@@ -9,6 +9,10 @@ od_drug_types_icd9cm(data, diag_ecode_col)
 \arguments{
 \item{diag_ecode_col}{}
 }
+\value{
+any_drug_icd9cm, any_opioid_icd9cm,
+non_heroin_icd9cm, and heroin_icd9cm
+}
 \description{
 Title
 }

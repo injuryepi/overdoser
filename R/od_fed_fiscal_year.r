@@ -2,7 +2,7 @@
 #'
 #' @param date
 #'
-#' @return
+#' @return federal fiscal year
 #' @export
 #'
 #' @examples

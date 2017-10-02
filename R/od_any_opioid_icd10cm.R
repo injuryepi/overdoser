@@ -1,9 +1,10 @@
 #' Title
 #'
-#' @param data
-#' @param diag_ecode_col
+#' @param data: input data
+#' @param diag_ecode_col: indices of diagnosis and
+#' E codes of interest
 #'
-#' @return
+#' @return variable any_opioid_icd10cm
 #' @export
 #'
 #' @examples

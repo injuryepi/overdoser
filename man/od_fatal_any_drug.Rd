@@ -9,6 +9,9 @@ od_fatal_any_drug(data, underly_col)
 \arguments{
 \item{underly_col}{}
 }
+\value{
+cdc_any_drug
+}
 \description{
 Title
 }

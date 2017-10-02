@@ -3,7 +3,7 @@
 #' @param data
 #' @param underly_col
 #'
-#' @return
+#' @return cdc_any_drug
 #' @export
 #'
 #' @examples

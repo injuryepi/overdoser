@@ -7,7 +7,12 @@
 od_age11(data, age)
 }
 \arguments{
-\item{age}{}
+\item{data:}{input data}
+
+\item{age:}{age in years}
+}
+\value{
+new variables of 11 age groups agegrp11 and age11
 }
 \description{
 Title

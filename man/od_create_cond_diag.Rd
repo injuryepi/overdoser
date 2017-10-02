@@ -7,7 +7,16 @@
 od_create_cond_diag(data, expr, colvec, ignore.case = T, perl = T, cond.var)
 }
 \arguments{
-\item{cond.var}{}
+\item{data:}{input data}
+
+\item{expr:}{regular expressions}
+
+\item{colvec:}{indices of variables of interest}
+
+\item{cond.var:}{conditional variable}
+}
+\value{
+new variable defined by the regular expressions
 }
 \description{
 Title

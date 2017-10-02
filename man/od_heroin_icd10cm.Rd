@@ -9,6 +9,9 @@ od_heroin_icd10cm(data, diag_ecode_col)
 \arguments{
 \item{diag_ecode_col}{}
 }
+\value{
+heroin_icd10cm
+}
 \description{
 Title
 }

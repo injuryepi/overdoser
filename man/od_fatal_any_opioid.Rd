@@ -9,6 +9,9 @@ od_fatal_any_opioid(data, underly_col, mult_col)
 \arguments{
 \item{mult_col}{}
 }
+\value{
+cdc_any_drugs, cdc_any_opioid,
+}
 \description{
 Title
 }

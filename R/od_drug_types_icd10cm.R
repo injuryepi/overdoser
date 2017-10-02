@@ -3,7 +3,8 @@
 #' @param data
 #' @param diag_ecode_col
 #'
-#' @return
+#' @return any_drug_icd10cm, any_opioid_icd10cm,
+#' non_heroin_icd10cm, and heroin_icd10cm
 #' @export
 #'
 #' @examples

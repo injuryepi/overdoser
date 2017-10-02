@@ -11,6 +11,10 @@ od_direct_age_adjust(data, agegrp = agegrp11, count = count,
 \arguments{
 \item{alpha}{}
 }
+\value{
+age_adj_rate, lower_age_adj
+and upper_age_adj
+}
 \description{
 Title
 }

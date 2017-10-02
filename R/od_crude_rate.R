@@ -7,7 +7,8 @@
 #' @param r
 #' @param alpha
 #'
-#' @return
+#' @return crude_rate, lower_crude_rate,
+#' and upper_crude_rate
 #' @export
 #'
 #' @examples

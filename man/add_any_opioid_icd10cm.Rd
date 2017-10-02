@@ -7,7 +7,13 @@
 add_any_opioid_icd10cm(data, diag_ecode_col)
 }
 \arguments{
-\item{diag_ecode_col}{}
+\item{data:}{input data}
+
+\item{diag_ecode_col:}{indices of diagnosis and
+E codes of interest}
+}
+\value{
+variable any_opioid_icd10cm
 }
 \description{
 Title

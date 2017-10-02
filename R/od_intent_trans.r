@@ -4,7 +4,7 @@
 #' @param diag_ecode_col
 #' @param date
 #'
-#' @return
+#' @return intent_drugs
 #' @export
 #'
 #' @examples

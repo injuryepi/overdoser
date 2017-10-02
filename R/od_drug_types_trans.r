@@ -11,8 +11,9 @@
 #'
 #' @examples
 #' hosp_set %>%
-#' od_drug_types_trans(diag_ecode_col = c(3, 6), date = discharge_date) #' %>% select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) %>%
-#' sample_n(10)
+#' od_drug_types_trans(diag_ecode_col = c(3, 6),
+#' date = discharge_date) %>%
+#' select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) %>% sample_n(10)
 #'
 od_drug_types_trans <- function(data, diag_ecode_col, date){
 

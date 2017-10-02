@@ -1,9 +1,9 @@
 #' Title
 #'
-#' @param data
-#' @param age
+#' @param data: input data
+#' @param age: age in years
 #'
-#' @return
+#' @return new variables of 11 age groups agegrp11 and age11
 #' @export
 #'
 #' @examples

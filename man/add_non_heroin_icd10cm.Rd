@@ -9,6 +9,9 @@ add_non_heroin_icd10cm(data, diag_ecode_col)
 \arguments{
 \item{diag_ecode_col}{}
 }
+\value{
+non_heroin_icd10cm
+}
 \description{
 Title
 }

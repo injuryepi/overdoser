@@ -1,13 +1,13 @@
 #' Title
 #'
-#' @param data
-#' @param expr
-#' @param colvec
+#' @param data: input data
+#' @param expr: regular expressions
+#' @param colvec: indices of variables of interest
 #' @param ignore.case
 #' @param perl
-#' @param cond.var
+#' @param cond.var: conditional variable
 #'
-#' @return
+#' @return new variable defined by the regular expressions
 #' @export
 #'
 #' @examples

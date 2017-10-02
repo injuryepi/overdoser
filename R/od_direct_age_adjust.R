@@ -9,7 +9,8 @@
 #' @param r
 #' @param alpha
 #'
-#' @return
+#' @return age_adj_rate, lower_age_adj
+#' and upper_age_adj
 #' @export
 #'
 #' @examples

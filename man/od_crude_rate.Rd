@@ -9,6 +9,10 @@ od_crude_rate(data, count, population, s = 1e+05, r = 1, alpha = 0.05)
 \arguments{
 \item{alpha}{}
 }
+\value{
+crude_rate, lower_crude_rate,
+and upper_crude_rate
+}
 \description{
 Title
 }

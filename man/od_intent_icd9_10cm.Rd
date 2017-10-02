@@ -9,6 +9,9 @@ od_intent_icd9_10cm(data, diag_ecode_col)
 \arguments{
 \item{diag_ecode_col}{}
 }
+\value{
+intent_drugs
+}
 \description{
 Title
 }

@@ -9,6 +9,9 @@ od_fed_fiscal_year(date)
 \arguments{
 \item{date}{}
 }
+\value{
+federal fiscal year
+}
 \description{
 Title
 }

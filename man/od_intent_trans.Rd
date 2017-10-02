@@ -9,6 +9,9 @@ od_intent_trans(data, diag_ecode_col, date)
 \arguments{
 \item{date}{}
 }
+\value{
+intent_drugs
+}
 \description{
 Title
 }

@@ -3,7 +3,7 @@
 #' @param data
 #' @param diag_ecode_col
 #'
-#' @return
+#' @return heroin_icd10cm
 #' @export
 #'
 #' @examples
