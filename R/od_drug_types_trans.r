@@ -1,13 +1,19 @@
 #' Title
 #'
-#' @param data
-#' @param diag_ecode_col
-#' @param date
+#' @param data: the input dataset
+#' @param diag_ecode_col: indices(numeric) of diagnosis
+#' and E codes of interest
+#' @param date: date of discharge
 #'
-#' @return
+#' @return additional variables: any_drug, any_opioid,
+#' non_heroin_opioid , heroin
 #' @export
 #'
 #' @examples
+#' hosp_set %>%
+#' od_drug_types_trans(diag_ecode_col = c(3, 6), date = discharge_date) #' %>% select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) %>%
+#' sample_n(10)
+#'
 od_drug_types_trans <- function(data, diag_ecode_col, date){
 
 	date <- enquo(date)
