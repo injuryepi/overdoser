@@ -18,7 +18,7 @@ od_drug_types_trans <- function(data, diag_ecode_col, date){
 					 non_heroin_opioid = non_heroin_icd10cm,
 					 heroin = heroin_icd10cm)
 	
-	data <- dplyr::bind_rows(data1, data2)
+	data <- bind_rows(data1, data2)
 		
 	data
 }
