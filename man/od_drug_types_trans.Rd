@@ -7,8 +7,23 @@
 od_drug_types_trans(data, diag_ecode_col, date)
 }
 \arguments{
-\item{date}{}
+\item{data:}{the input dataset}
+
+\item{diag_ecode_col:}{indices(numeric) of diagnosis
+and E codes of interest}
+
+\item{date:}{date of discharge}
+}
+\value{
+additional variables: any_drug, any_opioid,
+non_heroin_opioid , heroin
 }
 \description{
 Title
+}
+\examples{
+hosp_set \%>\%
+od_drug_types_trans(diag_ecode_col = c(3, 6), date = discharge_date) #' \%>\% select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) \%>\%
+sample_n(10)
+
 }
