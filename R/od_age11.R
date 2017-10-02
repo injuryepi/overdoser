@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param data
+#' @param age
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_age11 <- function(data, age){
 
 	suppressWarnings(suppressMessages(require(classInt)))
@@ -14,7 +23,7 @@ od_age11 <- function(data, age){
 	agegrp11 <- as.factor(findCols(int11))
 
 	data %>% mutate(agegrp11 = agegrp11,
-			age11 = fct_recode(agegrp11, 
+			age11 = fct_recode(agegrp11,
 					   "<1" = "1",
 				 	   "01-04"  = "2",
 				 	   "05-14" = "3",

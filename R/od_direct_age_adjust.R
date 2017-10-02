@@ -1,3 +1,18 @@
+#' Title
+#'
+#' @param data
+#' @param agegrp
+#' @param count
+#' @param population
+#' @param standard_pop
+#' @param s
+#' @param r
+#' @param alpha
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_direct_age_adjust <- function(data, agegrp = agegrp11, count = count, population = population, standard_pop = NULL, s = 100000, r = 1, alpha = 0.05 ){
 	agegrp <- enquo(agegrp)
 	count <- enquo(count)

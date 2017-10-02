@@ -1,3 +1,15 @@
+#' Title
+#'
+#' @param data
+#' @param expr
+#' @param colvec
+#' @param ignore.case
+#' @param perl
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_create_diag <- function(data, expr, colvec, ignore.case = T, perl = T){
 	#regexp=regular expressions for the data
 	# colvec = vector of the columns of interest (columns with the diagnoses)

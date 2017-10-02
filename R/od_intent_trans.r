@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param data
+#' @param diag_ecode_col
+#' @param date
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_intent_trans <- function(data, diag_ecode_col, date){
 
 	date <- enquo(date)

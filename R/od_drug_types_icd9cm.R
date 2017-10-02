@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param data
+#' @param diag_ecode_col
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_drug_types_icd9cm <- function(data, diag_ecode_col){
 
 	cdc_drugs_icd9cm_regex_ <- "^9[67]|^E85[0-8]|^E950[0-5]|^E9620|^E980[0-5]"

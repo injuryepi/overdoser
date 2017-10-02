@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param data
+#' @param diag_ecode_col
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_heroin_icd10cm <- function(data, diag_ecode_col){
 
 	cdc_heroin_icd10cm_regex7_ <- "T401.(1|2|3|4)(A|D|$)"

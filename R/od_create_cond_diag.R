@@ -1,3 +1,16 @@
+#' Title
+#'
+#' @param data
+#' @param expr
+#' @param colvec
+#' @param ignore.case
+#' @param perl
+#' @param cond.var
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_create_cond_diag <- function(data, expr, colvec, ignore.case = T, perl = T, cond.var){
 	# expr=regular expressions of interest
 	# colvec = vector of the columns of interest (columns with the diagnosis code)

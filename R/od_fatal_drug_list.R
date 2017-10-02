@@ -20,8 +20,7 @@
 #' @param underly_col The column index for the with the ICD-10 underlying cause of death
 #' @param mult_col The column indices of the multiple-cause-of-death codes
 #'
-#' @return The original dataset with the added drug fields.
-#' 1 means drug present and 0 otherwise
+#' @return The original dataset with the added drug fields.1 means drug present and 0 otherwise
 #' @export
 #'
 #' @examples Examples will be added later

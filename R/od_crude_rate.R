@@ -1,3 +1,16 @@
+#' Title
+#'
+#' @param data
+#' @param count
+#' @param population
+#' @param s
+#' @param r
+#' @param alpha
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_crude_rate <- function(data, count, population, s = 100000, r = 1, alpha = 0.05 ){
 
 	# confidence intervals with Wilson method

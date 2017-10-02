@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param data
+#' @param underly_col
+#' @param mult_col
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_fatal_any_opioid <- function(data, underly_col, mult_col){
   data %>%
     mutate(cdc_any_drugs =

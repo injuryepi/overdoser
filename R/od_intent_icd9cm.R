@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param data
+#' @param diag_ecode_col
+#'
+#' @return
+#' @export
+#'
+#' @examples
 od_intent_icd9cm <- function(data, diag_ecode_col){
 
 	unintentional_drugs_icd9cm_regex_ <- "^E85[0-8]"
