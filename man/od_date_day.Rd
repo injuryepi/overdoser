@@ -7,7 +7,7 @@
 od_date_day(x)
 }
 \arguments{
-\item{x}{truncated date}
+\item{x}{only truncated date of mm/yyyy or m/yyyy}
 }
 \value{
 Return complete date with 15/ inserted as day
@@ -16,6 +16,6 @@ Return complete date with 15/ inserted as day
 Complete trucated date.
 }
 \examples{
-od_full_date(c("03/2015", "11/2014", "09/2017"))
-# "2015-03-15" "2014-11-15" "2017-09-15"
+od_full_date(c('03/2015', '11/2014', '09/2017'))
+# '2015-03-15' '2014-11-15' '2017-09-15'
 }

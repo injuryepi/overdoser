@@ -16,6 +16,6 @@ federal fiscal year
 Calculate fiscal year as October 1, year_n to September 30, year_n+1
 }
 \examples{
-od_fed_fiscal_year(as.Date(c("2015-05-15", "2015-11-20", "2016-02-10")))
+od_fed_fiscal_year(as.Date(c('2015-05-15', '2015-11-20', '2016-02-10')))
 # 2015 2016 2016
 }

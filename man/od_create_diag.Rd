@@ -24,11 +24,11 @@ new variable matching the pattern described in the regular expression
 Create a new variable based on pattern in the argument expr
 }
 \examples{
-heroin_icd9cm_regex_ <- "^96501|^E8500"
+heroin_icd9cm_regex_ <- '^96501|^E8500'
 library(tidyverse)
-	hosp_net \%>\%
-	filter(year == 2015) \%>\%
-	od_create_diag(expr = heroin_icd9cm_regex_,
-	colvec = c(1:5)) \%>\% sample_n(10)
+\\thosp_net \%>\%
+\\tfilter(year == 2015) \%>\%
+\\tod_create_diag(expr = heroin_icd9cm_regex_,
+\\tcolvec = c(1:5)) \%>\% sample_n(10)
 
 }
