@@ -1,12 +1,14 @@
-#' Title
+#' Find any drug overdose.
 #'
-#' @param data
-#' @param underly_col
+#' Find any drug based on CDC definitions
+#'
+#' @param data input data
+#' @param underly_col underlying column index
 #'
 #' @return cdc_any_drug
 #' @export
 #'
-#' @examples
+#' @examples to be added
 od_fatal_any_drug <- function(data, underly_col){
   data %>%
     mutate(cdc_any_drug =

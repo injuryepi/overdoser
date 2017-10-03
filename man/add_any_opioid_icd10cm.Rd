@@ -2,7 +2,7 @@
 % Please edit documentation in R/od_any_opioid_icd10cm.R
 \name{add_any_opioid_icd10cm}
 \alias{add_any_opioid_icd10cm}
-\title{Title}
+\title{Any opioid case.}
 \usage{
 add_any_opioid_icd10cm(data, diag_ecode_col)
 }
@@ -16,5 +16,8 @@ E codes of interest}
 variable any_opioid_icd10cm
 }
 \description{
-Title
+Any opioid case.
+}
+\examples{
+to be added
 }

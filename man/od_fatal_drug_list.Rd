@@ -2,7 +2,7 @@
 % Please edit documentation in R/od_fatal_drug_list.R
 \name{od_fatal_drug_list}
 \alias{od_fatal_drug_list}
-\title{Add selected drug overdose as defined by CDC using ICD-10}
+\title{Add selected drug overdose as defined by CDC using ICD-10.}
 \usage{
 od_fatal_drug_list(data, underly_col, mult_col)
 }

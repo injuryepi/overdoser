@@ -1,4 +1,7 @@
-#' Title Make an eleven-category age grouping
+#' Make an eleven-category age grouping.
+#'
+#' Useful age grouping for direct age-adjusted
+#' rate calculation
 #'
 #' @param data: input data
 #' @param age: age in years

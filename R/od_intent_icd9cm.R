@@ -1,12 +1,12 @@
-#' Title
+#' Find intent for ICD-9-CM
 #'
-#' @param data
-#' @param diag_ecode_col
+#' @param data input data
+#' @param diag_ecode_col column indices
 #'
 #' @return intent_drugs
 #' @export
 #'
-#' @examples
+#' @examples to be added
 od_intent_icd9cm <- function(data, diag_ecode_col){
 
 	unintentional_drugs_icd9cm_regex_ <- "^E85[0-8]"

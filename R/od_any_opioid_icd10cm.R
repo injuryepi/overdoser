@@ -1,4 +1,4 @@
-#' Title
+#' Any opioid case.
 #'
 #' @param data: input data
 #' @param diag_ecode_col: indices of diagnosis and
@@ -7,7 +7,7 @@
 #' @return variable any_opioid_icd10cm
 #' @export
 #'
-#' @examples
+#' @examples to be added
 add_any_opioid_icd10cm <- function(data, diag_ecode_col){
 
 	cdc_opioid_icd10cm_regex7_ <- "(T40[01234].|T406[09])(1|2|3|4)(A|D|$)"

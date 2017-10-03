@@ -1,6 +1,6 @@
-#' Title
+#' Complete trucated date.
 #'
-#' @param x
+#' @param x truncated date
 #'
 #' @return Return complete date with 15/ inserted as day
 #' @export

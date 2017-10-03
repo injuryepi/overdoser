@@ -1,4 +1,4 @@
-#' Add selected drug overdose as defined by CDC using ICD-10
+#' Add selected drug overdose as defined by CDC using ICD-10.
 #'
 #' cdc_any_drugs: Any drug overdose death,
 #' that is an underlying cause-of-death ICD-10 codes of

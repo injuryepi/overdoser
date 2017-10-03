@@ -2,7 +2,7 @@
 % Please edit documentation in R/od_drug_types_trans.r
 \name{od_drug_types_trans}
 \alias{od_drug_types_trans}
-\title{Add new drug variables based on both ICD-9-CM and ICD-10-CM}
+\title{Add new drug variables based on both ICD-9-CM and ICD-10-CM.}
 \usage{
 od_drug_types_trans(data, diag_ecode_col, date)
 }
@@ -18,7 +18,8 @@ additional variables: any_drug, any_opioid, non_heroin_opioid ,
   heroin
 }
 \description{
-Add new drug variables based on both ICD-9-CM and ICD-10-CM
+Use date to apply ICD-9_CM criteria to pre fiscal year 2016 and ICD-10-CM
+criteria to the rest.
 }
 \examples{
 hosp_set \%>\%

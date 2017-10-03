@@ -2,11 +2,15 @@
 % Please edit documentation in R/od_create_cond_diag.R
 \name{od_create_cond_diag}
 \alias{od_create_cond_diag}
-\title{Title}
+\title{create conditionnally a new variable.}
 \usage{
 od_create_cond_diag(data, expr, colvec, ignore.case = T, perl = T, cond.var)
 }
 \arguments{
+\item{ignore.case}{logical}
+
+\item{perl}{logical}
+
 \item{data:}{input data}
 
 \item{expr:}{regular expressions}
@@ -19,5 +23,8 @@ od_create_cond_diag(data, expr, colvec, ignore.case = T, perl = T, cond.var)
 new variable defined by the regular expressions
 }
 \description{
-Title
+create conditionnally a new variable
+}
+\examples{
+to be added
 }

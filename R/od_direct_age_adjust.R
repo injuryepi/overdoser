@@ -1,19 +1,19 @@
 #' Title
 #'
-#' @param data
-#' @param agegrp
-#' @param count
-#' @param population
-#' @param standard_pop
-#' @param s
-#' @param r
-#' @param alpha
+#' @param data input data
+#' @param agegrp age group variable
+#' @param count count variable
+#' @param population population variable
+#' @param standard_pop standar population table or NULL
+#' @param s scale numeric
+#' @param r round numeric
+#' @param alpha alpha numeric
 #'
 #' @return age_adj_rate, lower_age_adj
 #' and upper_age_adj
 #' @export
 #'
-#' @examples
+#' @examples to be added
 od_direct_age_adjust <- function(data, agegrp = agegrp11, count = count, population = population, standard_pop = NULL, s = 100000, r = 1, alpha = 0.05 ){
 	agegrp <- enquo(agegrp)
 	count <- enquo(count)

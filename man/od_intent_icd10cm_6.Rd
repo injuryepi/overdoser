@@ -2,16 +2,21 @@
 % Please edit documentation in R/od_intent_icd10cm_6.R
 \name{od_intent_icd10cm_6}
 \alias{od_intent_icd10cm_6}
-\title{Title}
+\title{Find six categories intent.}
 \usage{
 od_intent_icd10cm_6(data, diag_ecode_col)
 }
 \arguments{
-\item{diag_ecode_col}{}
+\item{data}{input data}
+
+\item{diag_ecode_col}{column indices}
 }
 \value{
 intent_drugs6
 }
 \description{
-Title
+Find six categories intent from ICD-10-CM
+}
+\examples{
+to be added
 }

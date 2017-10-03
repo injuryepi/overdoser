@@ -1,14 +1,16 @@
-#' Title
+#' Find any opioid.
 #'
-#' @param data
-#' @param underly_col
-#' @param mult_col
+#' Using CDC definitions.
+#'
+#' @param data input data
+#' @param underly_col underlying column index
+#' @param mult_col multiple causes column indices
 #'
 #' @return cdc_any_drugs, cdc_any_opioid,
 #'
 #' @export
 #'
-#' @examples
+#' @examples to be added
 od_fatal_any_opioid <- function(data, underly_col, mult_col){
   data %>%
     mutate(cdc_any_drug =

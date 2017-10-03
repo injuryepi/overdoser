@@ -2,16 +2,23 @@
 % Please edit documentation in R/od_fatal_any_opioid.R
 \name{od_fatal_any_opioid}
 \alias{od_fatal_any_opioid}
-\title{Title}
+\title{Find any opioid.}
 \usage{
 od_fatal_any_opioid(data, underly_col, mult_col)
 }
 \arguments{
-\item{mult_col}{}
+\item{data}{input data}
+
+\item{underly_col}{underlying column index}
+
+\item{mult_col}{multiple causes column indices}
 }
 \value{
 cdc_any_drugs, cdc_any_opioid,
 }
 \description{
-Title
+Using CDC definitions.
+}
+\examples{
+to be added
 }

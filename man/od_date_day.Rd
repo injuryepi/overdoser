@@ -2,18 +2,18 @@
 % Please edit documentation in R/od_date_day.r
 \name{od_date_day}
 \alias{od_date_day}
-\title{Title}
+\title{Complete trucated date.}
 \usage{
 od_date_day(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{truncated date}
 }
 \value{
 Return complete date with 15/ inserted as day
 }
 \description{
-Title
+Complete trucated date.
 }
 \examples{
 od_full_date(c("03/2015", "11/2014", "09/2017"))

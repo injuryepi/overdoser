@@ -2,7 +2,7 @@
 % Please edit documentation in R/od_age11.R
 \name{od_age11}
 \alias{od_age11}
-\title{Title Make an eleven-category age grouping}
+\title{Make an eleven-category age grouping.}
 \usage{
 od_age11(data, age)
 }
@@ -15,7 +15,8 @@ od_age11(data, age)
 Age groups agegrp11(numeric) and age11(character)
 }
 \description{
-Title Make an eleven-category age grouping
+Useful age grouping for direct age-adjusted
+rate calculation
 }
 \examples{
 library(tidyverse)

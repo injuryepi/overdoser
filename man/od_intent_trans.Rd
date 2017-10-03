@@ -2,22 +2,26 @@
 % Please edit documentation in R/od_intent_trans.r
 \name{od_intent_trans}
 \alias{od_intent_trans}
-\title{Title}
+\title{Find intent for ICD-9-CM and ICD-10-CM.}
 \usage{
 od_intent_trans(data, diag_ecode_col, date)
 }
 \arguments{
-\item{diag_ecode_col}{numeric vector of the
-selected diagnosis and E codes}
+\item{diag_ecode_col}{numeric vector of the selected diagnosis and E codes}
 
 \item{data:}{input data}
 
 \item{date:}{date of discharge}
 }
 \value{
-intent_drugs with values 1, 2, 3, 4 for
-unintentional, self-harm, assault and undetermined
+intent_drugs with values 1, 2, 3, 4 for unintentional, self-harm,
+  assault and undetermined
 }
 \description{
-Title
+Use date to apply ICD-9_CM intent criteria to pre fiscal year 2016 and
+ICD-10-CM criteria to the rest.
+}
+\examples{
+#' od_intent_trans(diag_ecode_col = c(3, 6), date = discharge_date) \%>\% select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) \%>\% sample_n(10)
+
 }

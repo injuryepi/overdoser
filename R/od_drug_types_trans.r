@@ -1,4 +1,7 @@
-#' Add new drug variables based on both ICD-9-CM and ICD-10-CM
+#' Add new drug variables based on both ICD-9-CM and ICD-10-CM.
+#'
+#' Use date to apply ICD-9_CM criteria to pre fiscal year 2016 and ICD-10-CM
+#' criteria to the rest.
 #'
 #' @param data: the input dataset
 #' @param diag_ecode_col: indices(numeric) of diagnosis and E codes of interest

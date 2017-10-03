@@ -1,14 +1,14 @@
-#' Title
+#' Create a new variable based on pattern.
+#'
+#' Create a new variable based on pattern in the argument expr
 #'
 #' @param data: input data
-#' @param expr: regular expression describing
-#' the pattern of interest
+#' @param expr: regular expression describing the pattern of interest
 #' @param colvec: indices of variables of interest
-#' @param ignore.case
-#' @param perl
+#' @param ignore.case logical
+#' @param perl logical
 #'
-#' @return new variable matching the pattern
-#' described in the regular expression
+#' @return new variable matching the pattern described in the regular expression
 #' @export
 #'
 #' @examples

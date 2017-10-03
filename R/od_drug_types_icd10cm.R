@@ -1,13 +1,17 @@
-#' Title
+#' Find drug types from ICD-10-CM.
 #'
-#' @param data
-#' @param diag_ecode_col
+#' Find any drug and selected opioids
 #'
-#' @return any_drug_icd10cm, any_opioid_icd10cm,
-#' non_heroin_icd10cm, and heroin_icd10cm
+#' @param data input data
+#' @param diag_ecode_col column indices
+#'
+#' @return any_drug_icd10cm, any_opioid_icd10cm, non_heroin_icd10cm, and
+#'   heroin_icd10cm
 #' @export
 #'
-#' @examples
+#' @examples to be added
+#' library(tidyverse)
+#' filter(hosp_set, year == 2016) %>% od_drug_types_icd10cm(diag_ecode_col = c(3, 6)) %>% sample_n(5)
 od_drug_types_icd10cm <- function(data, diag_ecode_col){
 
 	cdc_drugs_icd10cm_regex7_ <- "(?!(T3[679]9|T414|T427|T4[3579]9))(T3[6-9]|T4[0-9]|T50)..(1|2|3|4)(A|D|$)|((T3[679]9|T414|T427|T4[3579]9)(1|2|3|4).(A|D|$))"

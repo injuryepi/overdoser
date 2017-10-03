@@ -1,13 +1,15 @@
-#' Title
+#' Find drug types.
 #'
-#' @param data
-#' @param diag_ecode_col
+#' Find any drug and other opioids.
 #'
-#' @return any_drug_icd9_10cm, any_opioid_icd9_10cm,
-#' non_heroin_icd9_10cm, and heroin_icd9_10cm
+#' @param data input data
+#' @param diag_ecode_col column indices
+#'
+#' @return any_drug_icd9_10cm, any_opioid_icd9_10cm, non_heroin_icd9_10cm, and
+#'   heroin_icd9_10cm
 #' @export
 #'
-#' @examples
+#' @examples to be added
 od_drug_types_icd9_10cm <- function(data, diag_ecode_col){
 
 	cdc_drugs_icd9_10cm_regex_ <- "(?!(T3[679]9|T414|T427|T4[3579]9))(T3[6-9]|T4[0-9]|T50)..(1|2|3|4)(A|D|$)|((T3[679]9|T414|T427|T4[3579]9)(1|2|3|4).(A|D|$))|(?:^9[67]|^E85[0-8]|^E950[0-5]|^E9620|^E980[0-5])"

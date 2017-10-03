@@ -2,17 +2,23 @@
 % Please edit documentation in R/od_drug_types_icd9cm.R
 \name{od_drug_types_icd9cm}
 \alias{od_drug_types_icd9cm}
-\title{Title}
+\title{Find drug types based on ICD-9-CM.}
 \usage{
 od_drug_types_icd9cm(data, diag_ecode_col)
 }
 \arguments{
-\item{diag_ecode_col}{}
+\item{data:}{input data}
+
+\item{diag_ecode_col:}{indices of principal diagnosis and first E code}
 }
 \value{
-any_drug_icd9cm, any_opioid_icd9cm,
-non_heroin_icd9cm, and heroin_icd9cm
+any_drug_icd9cm, any_opioid_icd9cm, non_heroin_icd9cm, and
+  heroin_icd9cm
 }
 \description{
-Title
+Find any drug and other opioids from ICD-9-CM
+}
+\examples{
+ibrary(tidyverse)
+filter(hosp_set, year == 2014) \%>\% od_drug_types_icd9cm(diag_ecode_col = c(3, 6)) \%>\% sample_n(5)
 }

@@ -2,16 +2,21 @@
 % Please edit documentation in R/od_heroin_icd10cm.R
 \name{od_heroin_icd10cm}
 \alias{od_heroin_icd10cm}
-\title{Title}
+\title{Find heroin based on ICD-10-CM.}
 \usage{
 od_heroin_icd10cm(data, diag_ecode_col)
 }
 \arguments{
-\item{diag_ecode_col}{}
+\item{data}{input data}
+
+\item{diag_ecode_col}{column indices}
 }
 \value{
 heroin_icd10cm
 }
 \description{
-Title
+Find heroin based on ICD-10-CM.
+}
+\examples{
+to be added
 }

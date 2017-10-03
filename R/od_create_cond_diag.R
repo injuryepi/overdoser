@@ -1,16 +1,18 @@
-#' Title
+#' create conditionnally a new variable.
+#'
+#' create conditionnally a new variable
 #'
 #' @param data: input data
 #' @param expr: regular expressions
 #' @param colvec: indices of variables of interest
-#' @param ignore.case
-#' @param perl
+#' @param ignore.case logical
+#' @param perl logical
 #' @param cond.var: conditional variable
 #'
 #' @return new variable defined by the regular expressions
 #' @export
 #'
-#' @examples
+#' @examples to be added
 od_create_cond_diag <- function(data, expr, colvec, ignore.case = T, perl = T, cond.var){
 	# expr=regular expressions of interest
 	# colvec = vector of the columns of interest (columns with the diagnosis code)

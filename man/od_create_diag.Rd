@@ -2,26 +2,26 @@
 % Please edit documentation in R/od_create_diag.r
 \name{od_create_diag}
 \alias{od_create_diag}
-\title{Title}
+\title{Create a new variable based on pattern.}
 \usage{
 od_create_diag(data, expr, colvec, ignore.case = T, perl = T)
 }
 \arguments{
-\item{perl}{}
+\item{ignore.case}{logical}
+
+\item{perl}{logical}
 
 \item{data:}{input data}
 
-\item{expr:}{regular expression describing
-the pattern of interest}
+\item{expr:}{regular expression describing the pattern of interest}
 
 \item{colvec:}{indices of variables of interest}
 }
 \value{
-new variable matching the pattern
-described in the regular expression
+new variable matching the pattern described in the regular expression
 }
 \description{
-Title
+Create a new variable based on pattern in the argument expr
 }
 \examples{
 heroin_icd9cm_regex_ <- "^96501|^E8500"

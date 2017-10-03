@@ -2,16 +2,20 @@
 % Please edit documentation in R/od_fed_fiscal_year.r
 \name{od_fed_fiscal_year}
 \alias{od_fed_fiscal_year}
-\title{Title}
+\title{Calculate federal fiscal year.}
 \usage{
 od_fed_fiscal_year(date)
 }
 \arguments{
-\item{date}{}
+\item{date}{date}
 }
 \value{
 federal fiscal year
 }
 \description{
-Title
+Calculate fiscal year as October 1, year_n to September 30, year_n+1
+}
+\examples{
+od_fed_fiscal_year(as.Date(c("2015-05-15", "2015-11-20", "2016-02-10")))
+# 2015 2016 2016
 }

@@ -2,17 +2,24 @@
 % Please edit documentation in R/od_drug_types_icd10cm.R
 \name{od_drug_types_icd10cm}
 \alias{od_drug_types_icd10cm}
-\title{Title}
+\title{Find drug types from ICD-10-CM.}
 \usage{
 od_drug_types_icd10cm(data, diag_ecode_col)
 }
 \arguments{
-\item{diag_ecode_col}{}
+\item{data}{input data}
+
+\item{diag_ecode_col}{column indices}
 }
 \value{
-any_drug_icd10cm, any_opioid_icd10cm,
-non_heroin_icd10cm, and heroin_icd10cm
+any_drug_icd10cm, any_opioid_icd10cm, non_heroin_icd10cm, and
+  heroin_icd10cm
 }
 \description{
-Title
+Find any drug and selected opioids
+}
+\examples{
+to be added
+library(tidyverse)
+filter(hosp_set, year == 2016) \%>\% od_drug_types_icd10cm(diag_ecode_col = c(3, 6)) \%>\% sample_n(5)
 }

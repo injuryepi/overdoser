@@ -2,16 +2,21 @@
 % Please edit documentation in R/od_intent_icd9cm.R
 \name{od_intent_icd9cm}
 \alias{od_intent_icd9cm}
-\title{Title}
+\title{Find intent for ICD-9-CM}
 \usage{
 od_intent_icd9cm(data, diag_ecode_col)
 }
 \arguments{
-\item{diag_ecode_col}{}
+\item{data}{input data}
+
+\item{diag_ecode_col}{column indices}
 }
 \value{
 intent_drugs
 }
 \description{
-Title
+Find intent for ICD-9-CM
+}
+\examples{
+to be added
 }

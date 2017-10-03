@@ -2,17 +2,30 @@
 % Please edit documentation in R/od_crude_rate.R
 \name{od_crude_rate}
 \alias{od_crude_rate}
-\title{Title}
+\title{Calculate crude rate.}
 \usage{
 od_crude_rate(data, count, population, s = 1e+05, r = 1, alpha = 0.05)
 }
 \arguments{
-\item{alpha}{}
+\item{data}{input data}
+
+\item{count}{count variable}
+
+\item{population}{population variable}
+
+\item{s}{scale}
+
+\item{r}{round}
+
+\item{alpha}{alpha}
 }
 \value{
 crude_rate, lower_crude_rate,
 and upper_crude_rate
 }
 \description{
-Title
+Crude rate and confidence intervals based on Wilson method
+}
+\examples{
+to be added
 }

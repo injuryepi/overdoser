@@ -2,17 +2,22 @@
 % Please edit documentation in R/od_drug_types_icd9_10cm.R
 \name{od_drug_types_icd9_10cm}
 \alias{od_drug_types_icd9_10cm}
-\title{Title}
+\title{Find drug types.}
 \usage{
 od_drug_types_icd9_10cm(data, diag_ecode_col)
 }
 \arguments{
-\item{diag_ecode_col}{}
+\item{data}{input data}
+
+\item{diag_ecode_col}{column indices}
 }
 \value{
-any_drug_icd9_10cm, any_opioid_icd9_10cm,
-non_heroin_icd9_10cm, and heroin_icd9_10cm
+any_drug_icd9_10cm, any_opioid_icd9_10cm, non_heroin_icd9_10cm, and
+  heroin_icd9_10cm
 }
 \description{
-Title
+Find any drug and other opioids.
+}
+\examples{
+to be added
 }

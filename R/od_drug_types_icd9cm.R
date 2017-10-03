@@ -1,13 +1,17 @@
-#' Title
+#' Find drug types based on ICD-9-CM.
 #'
-#' @param data
-#' @param diag_ecode_col
+#' Find any drug and other opioids from ICD-9-CM
 #'
-#' @return any_drug_icd9cm, any_opioid_icd9cm,
-#' non_heroin_icd9cm, and heroin_icd9cm
+#' @param data: input data
+#' @param diag_ecode_col: indices of principal diagnosis and first E code
+#'
+#' @return any_drug_icd9cm, any_opioid_icd9cm, non_heroin_icd9cm, and
+#'   heroin_icd9cm
 #' @export
 #'
 #' @examples
+#' ibrary(tidyverse)
+#' filter(hosp_set, year == 2014) %>% od_drug_types_icd9cm(diag_ecode_col = c(3, 6)) %>% sample_n(5)
 od_drug_types_icd9cm <- function(data, diag_ecode_col){
 
 	cdc_drugs_icd9cm_regex_ <- "^9[67]|^E85[0-8]|^E950[0-5]|^E9620|^E980[0-5]"

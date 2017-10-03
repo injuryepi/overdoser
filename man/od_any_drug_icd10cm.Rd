@@ -2,24 +2,24 @@
 % Please edit documentation in R/od_any_drug_icd10cm.R
 \name{od_any_drug_icd10cm}
 \alias{od_any_drug_icd10cm}
-\title{Find any drug}
+\title{Find any drug.}
 \usage{
 od_any_drug_icd10cm(data, diag_ecode_col)
 }
 \arguments{
 \item{data:}{input data}
 
-\item{diag_ecode_col:}{inumeric vector of the selected diagnosis and E codes}
+\item{diag_ecode_col:}{inumeric vector of the selected
+diagnosis and E codes}
 }
 \value{
 variable any_drug_icd10cm
 }
 \description{
-Find any drug
+Find any drug as defined by CDC
 }
 \examples{
 library(tidyverse)
 library(overdoser)
 hosp_set \%>\% od_any_drug_icd10cm(diag_ecode_col = c(3,6)) \%>\% sample_n(10)
-
 }

@@ -9,7 +9,21 @@ od_direct_age_adjust(data, agegrp = agegrp11, count = count,
   alpha = 0.05)
 }
 \arguments{
-\item{alpha}{}
+\item{data}{input data}
+
+\item{agegrp}{age group variable}
+
+\item{count}{count variable}
+
+\item{population}{population variable}
+
+\item{standard_pop}{standar population table or NULL}
+
+\item{s}{scale numeric}
+
+\item{r}{round numeric}
+
+\item{alpha}{alpha numeric}
 }
 \value{
 age_adj_rate, lower_age_adj
@@ -17,4 +31,7 @@ and upper_age_adj
 }
 \description{
 Title
+}
+\examples{
+to be added
 }

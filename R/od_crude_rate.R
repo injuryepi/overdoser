@@ -1,17 +1,19 @@
-#' Title
+#' Calculate crude rate.
 #'
-#' @param data
-#' @param count
-#' @param population
-#' @param s
-#' @param r
-#' @param alpha
+#'Crude rate and confidence intervals based on Wilson method
+#'
+#' @param data input data
+#' @param count count variable
+#' @param population population variable
+#' @param s scale
+#' @param r round
+#' @param alpha alpha
 #'
 #' @return crude_rate, lower_crude_rate,
 #' and upper_crude_rate
 #' @export
 #'
-#' @examples
+#' @examples to be added
 od_crude_rate <- function(data, count, population, s = 100000, r = 1, alpha = 0.05 ){
 
 	# confidence intervals with Wilson method

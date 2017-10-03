@@ -1,12 +1,14 @@
-#' Title
+#' Find intent based on ICD-10-CM.
 #'
-#' @param data
-#' @param diag_ecode_col
+#' Find intent based on ICD-10-CM.
+#'
+#' @param data input data
+#' @param diag_ecode_col column indices
 #'
 #' @return intent_drugs
 #' @export
 #'
-#' @examples
+#' @examples to be added
 od_intent_icd10cm <- function(data, diag_ecode_col){
 
 	unintentional_drugs_icd10cm_regex_ <- "(?!(T3[679]9|T414|T427|T4[3579]9))(T3[6-9]|T4[0-9]|T50)..(1)|((T3[679]9|T414|T427|T4[3579]9)(1))"
