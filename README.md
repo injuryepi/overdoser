@@ -4,6 +4,6 @@ ovderdoser (overdose R), a package with functions and data for the analysis of h
 
 To install and load the overdoser package into your working environment:
 
-1. Install the devtools package: *install.packages("devtools")*
-2. Install the overdoser package: *devtools::install_github("injuryepi/overdoser")*
-3. Load the package: library(overdoser)
+1. Install the devtools package: *`install.packages("devtools")`*
+2. Install the overdoser package: *`devtools::install_github("injuryepi/overdoser")`*
+3. Load the package: `library(overdoser)`
