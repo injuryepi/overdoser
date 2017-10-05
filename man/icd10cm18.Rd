@@ -5,6 +5,9 @@
 \alias{icd10cm18}
 \title{ICD-10-CM codes table and description v2018.}
 \format{Data frame}
+\source{
+\url{https://www.cdc.gov/nchs/icd/icd10cm.htm}
+}
 \usage{
 icd10cm18
 }
