@@ -34,7 +34,7 @@
 #'
 #' @format Data frame
 #' @source
-#'   \url{https://www.cdc.gov/nchs/icd/icd10cm.htm#FY%202018%20release%20of%20ICD-10-CM}
+#'   \url{https://www.cdc.gov/nchs/icd/icd10cm.htm}
 #'
 #' @keywords datasets
 #' @examples
@@ -42,6 +42,34 @@
 #' sample_n(icd10cm18, 5)
 #'
 "icd10cm18"
+
+#' Simulated Hospitalization Data.
+#'
+#' Dataset of 500 rows and 8 variables.
+#'
+#'
+#' @format Data frame
+#' @source simulation.
+#' @keywords datasets
+#' @examples
+#' library(dplyr)
+#' sample_n(hosp_set, 5)
+#'
+"hosp_set"
+
+#' Simulated Population Data.
+#'
+#' Dataset of 500 rows and 8 variables.
+#'
+#'
+#' @format Data frame
+#' @source simulation.
+#' @keywords datasets
+#' @examples
+#' library(dplyr)
+#' sample_n(hosp_set, 5)
+#'
+"pop_15_16"
 
 
 
