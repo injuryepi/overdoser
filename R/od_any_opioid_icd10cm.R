@@ -5,7 +5,7 @@
 #' E codes of interest
 #' @param any_opioid_icd10cm: choose the name for the created variable 
 #'
-#' @return variable any_opioid_icd10cm (or the chosen name
+#' @return variable any_opioid_icd10cm (or the chosen name)
 #' @export
 #'
 #' @examples to be added
