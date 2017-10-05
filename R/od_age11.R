@@ -20,7 +20,7 @@ od_age11 <- function(data, age) {
     
     age <- enquo(age)
     
-    age <- data %>% pull(!(!age))
+    age <- data %>% pull(!!age)
     
     agecut11 <- c(0, 0.99, 4, 14, 24, 34, 44, 54, 64, 74, 84, max(age, na.rm = T))
     int11 <- classIntervals(age, n = 11, style = "fixed", fixedBreaks = agecut11, 
