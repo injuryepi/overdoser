@@ -4,7 +4,8 @@
 \alias{od_any_opioid_icd10cm}
 \title{Any opioid case.}
 \usage{
-od_any_opioid_icd10cm(data, diag_ecode_col, any_opioid_icd10cm)
+od_any_opioid_icd10cm(data, diag_ecode_col,
+  any_opioid_icd10cm = any_opioid_icd10cm)
 }
 \arguments{
 \item{data:}{input data}
