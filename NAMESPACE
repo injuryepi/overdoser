@@ -3,6 +3,7 @@
 export(od_age11)
 export(od_any_drug_icd10cm)
 export(od_any_opioid_icd10cm)
+export(od_cocaine_icd10cm)
 export(od_create_cond_diag)
 export(od_create_diag)
 export(od_crude_rate)
