@@ -43,6 +43,23 @@
 #'
 "icd10cm18"
 
+#' ICD-9-CM codes table and description v2014.
+#'
+#' Dataset of 14567 rows and 2 variables.
+#'
+#'
+#' @format Data frame
+#' @source
+#'   \url{https://www.cms.gov/Medicare/Coding/ICD9ProviderDiagnosticCodes/codes.html}
+#'
+#' @keywords datasets
+#' @examples
+#' library(dplyr)
+#' sample_n(icd9cm14, 5)
+#'
+"icd9cm14"
+
+
 #' Simulated Hospitalization Data.
 #'
 #' Dataset of 500 rows and 8 variables.
