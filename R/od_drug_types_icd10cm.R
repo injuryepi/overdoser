@@ -14,7 +14,7 @@
 #' filter(hosp_set, year == 2016) %>% od_drug_types_icd10cm(diag_ecode_col = c(3, 6)) %>% sample_n(5)
 od_drug_types_icd10cm <- function(data, diag_ecode_col) {
     
-    cdc_drugs_icd10cm_regex7_ <- "(?!(T3[679]9|T414|T427|T4[3579]9))(T3[6-9]|T4[0-9]|T50)..(1|2|3|4)(A|D|$)|((T3[679]9|T414|T427|T4[3579]9)(1|2|3|4).(A|D|$))"
+    cdc_drugs_icd10cm_regex7_ <- "^(?!(T3[679]9|T414|T427|T4[3579]9))(T3[6-9]|T4[0-9]|T50)..(1|2|3|4)(A|D|$)|((T3[679]9|T414|T427|T4[3579]9)(1|2|3|4).(A|D|$))"
     
     cdc_opioid_icd10cm_regex7_ <- "(T40[01234].|T406[09])(1|2|3|4)(A|D|$)"
     
