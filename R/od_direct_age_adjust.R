@@ -37,19 +37,19 @@ od_direct_age_adjust <- function(data, agegrp = agegrp11, count = count, populat
     # https://pdfs.semanticscholar.org/584d/0d020d77e84d193f42e162c59c64795dac6c.pdf
     
     
-    data <- data %>% arrange(as.numeric(!(!agegrp)))
-    rate <- data %>% mutate(rate = count/population) %>% pull(rate)
+    data <- data %>% arrange(as.numeric(!!agegrp))
+    rate <- data %>% mutate(rate = (!!count)/(!!population)) %>% pull(rate)
     stdwt <- std_pop/sum(std_pop)
     dsr <- sum(stdwt * rate)
-    var_k <- data %>% mutate(var_k = count/population^2) %>% pull(var_k)
+    var_k <- data %>% mutate(var_k = !!count/(!!population)^2) %>% pull(var_k)
     dsr_var <- sum((stdwt^2) * var_k)
-    pop <- data %>% pull(population)
+    pop <- data %>% pull(!!population)
     wm <- max(stdwt/pop)
     gamma_lci <- qgamma(alpha/2, shape = (dsr^2)/dsr_var, scale = dsr_var/dsr)
     gamma_uci <- qgamma(1 - alpha/2, shape = ((dsr + wm)^2)/(dsr_var + wm^2), 
         scale = (dsr_var + wm^2)/(dsr + wm))
     
-    data0 <- data %>% summarise_at(vars(count, population), sum)
+    data0 <- data %>% summarise_at(vars(!!count, !!population), sum)
     
     
     data0 %>% add_column(age_adj_rate = round(dsr * s, r), lower_age_adj = round(gamma_lci * 
