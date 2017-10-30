@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @examples to be added
-od_direct_age_adjust <- function(data, agegrp = agegrp11, count = count, population = population, 
+od_direct_age_adjust <- function(data, agegrp, count, population, 
     standard_pop = NULL, s = 1e+05, r = 1, alpha = 0.05) {
     agegrp <- enquo(agegrp)
     count <- enquo(count)
