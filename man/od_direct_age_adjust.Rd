@@ -4,9 +4,8 @@
 \alias{od_direct_age_adjust}
 \title{Title}
 \usage{
-od_direct_age_adjust(data, agegrp, count,
-  population, standard_pop = NULL, s = 1e+05, r = 1,
-  alpha = 0.05)
+od_direct_age_adjust(data, agegrp, count, population, standard_pop = NULL,
+  s = 1e+05, r = 1, alpha = 0.05)
 }
 \arguments{
 \item{data}{input data}
