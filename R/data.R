@@ -88,5 +88,16 @@
 #'
 "pop_15_16"
 
-
+#' Seahawks colors.
+#'
+#' vector of 4 hex colors.
+#'
+#'
+#' @format vector
+#' @source https://teamcolorcodes.com/seattle-seahawks-color-codes/.
+#' @keywords datasets
+#' @examples
+#' plot(1:4, pch = 15, col = seacolors)
+#'
+"seacolors"
 
