@@ -3,19 +3,21 @@
 \docType{data}
 \name{seacolors}
 \alias{seacolors}
-\title{Seahawks colors.}
+\title{Seahawks and sounders colors}
 \format{vector}
 \source{
-https://teamcolorcodes.com/seattle-seahawks-color-codes/.
+https://teamcolorcodes.com/
 }
 \usage{
 seacolors
 }
 \description{
-vector of 4 hex colors.
+vector of 7 hex colors. The first 4 are Seahawks
 }
 \examples{
-plot(1:4, pch = 15, col = seacolors)
+
+print(seacolors)
+plot(1:7, pch = 15, col = seacolors, cex = 2)
 
 }
 \keyword{datasets}
