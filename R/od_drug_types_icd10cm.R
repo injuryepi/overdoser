@@ -11,6 +11,7 @@
 #'
 #' @examples to be added
 #' library(tidyverse)
+#' library(overdoser)
 #' filter(hosp_set, year == 2016) %>% od_drug_types_icd10cm(diag_ecode_col = c(3, 6)) %>% sample_n(5)
 od_drug_types_icd10cm <- function(data, diag_ecode_col) {
     
