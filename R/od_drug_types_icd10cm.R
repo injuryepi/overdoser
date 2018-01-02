@@ -20,11 +20,13 @@ od_drug_types_icd10cm <- function(data, diag_ecode_col) {
   cdc_non_heroin_icd10cm_regex7_ <- "(T40[0234].|T406[09])(1|2|3|4)(A|D|$)"
 
   cdc_heroin_icd10cm_regex7_ <- "T401.(1|2|3|4)(A|D|$)"
-  cdc_opioid_t40_2_regex7_ <- "T402.(1|2|3|4)(A|D|$)"
-  cdc_opioid_t40_3_regex7_ <- "T403.(1|2|3|4)(A|D|$)"
-  cdc_opioid_t40_4_regex7_ <- "T404.(1|2|3|4)(A|D|$)"
-  cdc_cocaine_t40_5_regex7_ <- "T405.(1|2|3|4)(A|D|$)"
-  cdc_stimulant_t43_6_regex7_ <- "T436.(1|2|3|4)(A|D|$)"
+  cdc_opioid_t40_2_icd10cm_regex7_ <- "T402.(1|2|3|4)(A|D|$)"
+  cdc_opioid_t40_3_icd10cm_regex7_ <- "T403.(1|2|3|4)(A|D|$)"
+  cdc_opioid_t40_4_icd10cm_regex7_ <- "T404.(1|2|3|4)(A|D|$)"
+  cdc_cocaine_t40_5_icd10cm_regex7_ <- "T405.(1|2|3|4)(A|D|$)"
+  cdc_stimulant_t43_6_icd10cm_regex7_ <- "T436.(1|2|3|4)(A|D|$)"
+
+
 
   data %>% mutate(any_drug_icd10cm = od_create_diag(
     ., expr = cdc_drugs_icd10cm_regex7_,
@@ -38,21 +40,20 @@ od_drug_types_icd10cm <- function(data, diag_ecode_col) {
   ), heroin_icd10cm = od_create_diag(
     ., expr = cdc_heroin_icd10cm_regex7_,
     colvec = diag_ecode_col
-  ),opioid_t40_2_icd10cm = od_create_diag(
-    	., expr = cdc_opioid_t40_2_icd10cm_regex7_,
-    	colvec = diag_ecode_col
-  ),opioid_t40_3_icd10cm = od_create_diag(
-  	., expr = cdc_opioid_t40_3_icd10cm_regex7_,
-  	colvec = diag_ecode_col
-  ),opioid_t40_4_icd10cm = od_create_diag(
-  	., expr = cdc_opioid_t40_4_icd10cm_regex7_,
-  	colvec = diag_ecode_col
-  ),cocaine_t40_5_icd10cm = od_create_diag(
-  	., expr = cdc_cocaine_t40_5_icd10cm_regex7_,
-  	colvec = diag_ecode_col
-  ),stimulant_t43_6_icd10cm = od_create_diag(
-  	., expr = cdc_opioid_t43_6_icd10cm_regex7_,
-  	colvec = diag_ecode_col
-
+  ), opioid_t40_2_icd10cm = od_create_diag(
+    ., expr = cdc_opioid_t40_2_icd10cm_regex7_,
+    colvec = diag_ecode_col
+  ), opioid_t40_3_icd10cm = od_create_diag(
+    ., expr = cdc_opioid_t40_3_icd10cm_regex7_,
+    colvec = diag_ecode_col
+  ), opioid_t40_4_icd10cm = od_create_diag(
+    ., expr = cdc_opioid_t40_4_icd10cm_regex7_,
+    colvec = diag_ecode_col
+  ), cocaine_t40_5_icd10cm = od_create_diag(
+    ., expr = cdc_cocaine_t40_5_icd10cm_regex7_,
+    colvec = diag_ecode_col
+  ), stimulant_t43_6_icd10cm = od_create_diag(
+    ., expr = cdc_stimulant_t43_6_icd10cm_regex7_,
+    colvec = diag_ecode_col
   ))
 }
