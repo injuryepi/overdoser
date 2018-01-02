@@ -19,7 +19,6 @@ The original dataset with the added drug fields.1 means drug present and 0 other
 \description{
 cdc_any_drugs: Any drug overdose death,
 that is an underlying cause-of-death ICD-10 codes of
-X40–X44, X60–X64, X85, and Y10–Y14.
 The following specific drug overdose deaths are drug overdose deaths
 (defined in cdc_any_drugs) that involved the specified ICD-10 codes
 in the multiple-cause-of-death fields
