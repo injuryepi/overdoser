@@ -37,12 +37,12 @@ od_direct_age_adjust <- function(data, agegrp, count, population,
   
     
    data <- data %>% arrange(as.numeric(!!agegrp)) 
-   rate <- data %>% mutate(rate = count/population) %>% pull(rate)
+   rate <- data %>% mutate(rate = (!!count)/(!!population)) %>% pull(rate)
     stdwt <- std_pop/sum(std_pop)
     dsr <- sum(stdwt * rate)
-    var_k <- data %>% mutate(var_k = count/population^2) %>% pull(var_k)
+    var_k <- data %>% mutate(var_k = (!!count)/(!!population)^2) %>% pull(var_k)
     dsr_var <- sum((stdwt^2) * var_k)
-    pop <- data %>% pull(population)
+    pop <- data %>% pull(!!population)
     wm <- max(stdwt/pop)
     gamma_lci <- qgamma(alpha/2, shape = (dsr^2)/dsr_var, scale = dsr_var/dsr)
     gamma_uci <- qgamma(1 - alpha/2, 
@@ -50,7 +50,7 @@ od_direct_age_adjust <- function(data, agegrp, count, population,
                         scale = (dsr_var + wm^2)/(dsr + wm))
     
 data0 <- data %>%
-      summarise_at(vars(count, population), sum)
+      summarise_at(vars(!!count, !!population), sum)
 
 
 data0 %>%
