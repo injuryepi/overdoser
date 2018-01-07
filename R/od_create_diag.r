@@ -14,31 +14,22 @@
 #' @examples
 #' heroin_icd9cm_regex_ <- '^96501|^E8500'
 #' library(tidyverse)
-#' \thosp_net %>%
+#' \thosp_set %>%
 #' \tfilter(year == 2015) %>%
 #' \tod_create_diag(expr = heroin_icd9cm_regex_,
 #' \tcolvec = c(1:5)) %>% sample_n(10)
 #'
 od_create_diag <- function(data, expr, colvec, ignore.case = T, perl = T) {
-    # regexp=regular expressions for the data colvec = vector of the columns of
-    # interest (columns with the diagnoses)
-    require(dplyr, quietly = T)
-    require(tidyr, quietly = T)
-    # select the variables of interest
-    sel <- names(data)[colvec]
-    # ensure they are all the variables are character vectors and create a data
-    # subset of the variables
-    df <- as_data_frame(data[sel]) %>% mutate_all(funs(as.character))
-    # a function to assign '1' if the regular expression matched or '0'
-    # otherwise
-    f <- function(x) grepl(expr, x, ignore.case = ignore.case, perl = perl) + 
-        0
-    # apply the function above to all the cells in the data frame 'df'
-    df <- sapply(df, f)
-    df <- as_data_frame(df) %>% mutate(new_diag = rowSums(., na.rm = TRUE)) %>% 
-        select(new_diag)
-    # the vector of the new variable (new diagnosis) to add to the data frame
-    # (data)
-    as.factor(as.numeric((df[, 1] > 0)))
-    
+   require(dplyr, quietly = T)
+  require(tidyr, quietly = T)
+  require(purrr, quietly = T)
+  #a function to assign '1' if the regular expression matched 
+  f1 = function(x) as.numeric(grepl(expr, x, ignore.case = ignore.case, perl = perl))
+  f2 = function(x){as.numeric(rowSums(x, na.rm = TRUE) > 0)} 
+ 
+  data %>% select(colvec) %>% 
+    mutate_all(funs(as.character)) %>% 
+    map_df(f1) %>% 
+    mutate(new_diag = f2(.)) %>% 
+    pull(new_diag)
 }
