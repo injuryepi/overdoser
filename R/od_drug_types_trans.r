@@ -25,7 +25,8 @@ od_drug_types_trans <- function(data, diag_ecode_col, date) {
 
 	data2 <- data %>% filter(od_fed_fiscal_year(!!date) > 2015) %>% od_drug_types_icd10cm(diag_ecode_col = diag_ecode_col) %>%
 		rename(any_drug = any_drug_icd10cm, any_opioid = any_opioid_icd10cm,
-					 non_heroin_opioid = non_heroin_icd10cm, heroin = heroin_icd10cm)
+					 non_heroin_opioid = non_heroin_icd10cm, heroin = heroin_icd10cm) %>%
+	        select(-opioid_t40_2_icd10cm, -opioid_t40_3_icd10cm, -opioid_t40_4_icd10cm, -cocaine_t40_5_icd10cm, -stimulant_t43_6_icd10cm)
 
 	data <- dplyr::bind_rows(data1, data2)
 
