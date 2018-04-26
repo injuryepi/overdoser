@@ -55,5 +55,6 @@ od_drug_types_icd10cm <- function(data, diag_ecode_col) {
   ), stimulant_t43_6_icd10cm = od_create_diag(
     ., expr = cdc_stimulant_t43_6_icd10cm_regex7_,
     colvec = diag_ecode_col
-  ))
+  )) %>% 
+  mutate(non_heroin_icd10cm = ifelse(heroin_icd10cm == 1, 0, non_heroin_icd10cm))
 }
