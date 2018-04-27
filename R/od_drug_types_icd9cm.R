@@ -26,5 +26,6 @@ od_drug_types_icd9cm <- function(data, diag_ecode_col) {
         colvec = diag_ecode_col), any_opioid_icd9cm = od_create_diag(., expr = cdc_opioid_icd9cm_regex_, 
         colvec = diag_ecode_col), non_heroin_icd9cm = od_create_diag(., expr = cdc_non_heroin_icd9cm_regex_, 
         colvec = diag_ecode_col), heroin_icd9cm = od_create_diag(., expr = cdc_heroin_icd9cm_regex_, 
-        colvec = diag_ecode_col))
+        colvec = diag_ecode_col)) %>% 
+    mutate( non_heroin_icd9cm = ifelse(heroin_icd9cm == 1, 0, non_heroin_icd9cm))
 }
