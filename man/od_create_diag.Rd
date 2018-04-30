@@ -26,7 +26,7 @@ Create a new variable based on pattern in the argument expr
 \examples{
 heroin_icd9cm_regex_ <- '^96501|^E8500'
 library(tidyverse)
-\\thosp_net \%>\%
+\\thosp_set \%>\%
 \\tfilter(year == 2015) \%>\%
 \\tod_create_diag(expr = heroin_icd9cm_regex_,
 \\tcolvec = c(1:5)) \%>\% sample_n(10)

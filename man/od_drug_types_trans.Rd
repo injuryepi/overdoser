@@ -4,12 +4,14 @@
 \alias{od_drug_types_trans}
 \title{Add new drug variables based on both ICD-9-CM and ICD-10-CM.}
 \usage{
-od_drug_types_trans(data, diag_ecode_col, date)
+od_drug_types_trans(data, diag_ecode_col_9, diag_ecode_col_10, date)
 }
 \arguments{
 \item{data:}{the input dataset}
 
-\item{diag_ecode_col:}{indices(numeric) of diagnosis and E codes of interest}
+\item{diag_ecode_col_9:}{indices(numeric) of diagnosis and E codes of interest}
+
+\item{diag_ecode_col_10:}{indices(numeric) of diagnosis and E codes of interest}
 
 \item{date:}{date of discharge}
 }
@@ -23,6 +25,6 @@ criteria to the rest.
 }
 \examples{
 hosp_set \%>\%
-od_drug_types_trans(diag_ecode_col = c(3, 6), date = discharge_date) \%>\% select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) \%>\% sample_n(10)
+od_drug_types_trans(diag_ecode_col_9 = c(3, 6), diag_ecode_col_10 = c(3, 6), date = discharge_date) \%>\% select(-age, -diagnosis_2, -diagnosis_3, -ecode2, -year) \%>\% sample_n(10)
 
 }
