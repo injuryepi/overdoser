@@ -28,8 +28,10 @@ od_drug_apr_icd9cm <- function(data, diag_col, ecode_col) {
     heroin_icd9cm2_ <- "^E8500"
 
     data %>% mutate(any_drug = od_create_diag_9(., expr1 = drugs_icd9cm1_, colvec1 = diag_col, expr2 = drugs_icd9cm2_, colvec2 = ecode_col),
-    								any_opioid = od_create_diag(., expr1 = opioid_icd9cm1_, colvec1 = diag_col, expr2 = opioid_icd9cm2_, colvec2 = ecode_col),
-    								non_heroin_opioid = od_create_diag(., expr1 = non_heroin_icd9cm1_, colvec1 = diag_col, expr2 = non_heroin_icd9cm2_, colvec2 = ecode_col),
-    								heroin = od_create_diag(., expr1 = heroin_icd9cm1_, colvec1 = diag_col, expr2 = heroin_icd9cm2_, colvec2 = ecode_col)) %>%
+
+    								any_opioid = od_create_diag_9(., expr1 = opioid_icd9cm1_, colvec1 = diag_col, expr2 = opioid_icd9cm2_, colvec2 = ecode_col),
+
+    								non_heroin_opioid = od_create_diag_9(., expr1 = non_heroin_icd9cm1_, colvec1 = diag_col, expr2 = non_heroin_icd9cm2_, colvec2 = ecode_col),
+    								heroin = od_create_diag_9(., expr1 = heroin_icd9cm1_, colvec1 = diag_col, expr2 = heroin_icd9cm2_, colvec2 = ecode_col)) %>%
     	mutate( non_heroin_opioid = ifelse(heroin == 1, 0, non_heroin_opioid))
 }
