@@ -9,7 +9,9 @@ od_drug_apr_icd9cm(data, diag_col, ecode_col)
 \arguments{
 \item{data:}{input data}
 
-\item{diag_ecode_col:}{indices of principal diagnosis and first E code}
+\item{diag_col:}{indices of principal diagnosis}
+
+\item{ecode_col:}{indices of ecodes}
 }
 \value{
 any_drug, any_opioid, non_heroin_opioid, and
