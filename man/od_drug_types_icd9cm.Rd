@@ -4,7 +4,7 @@
 \alias{od_drug_types_icd9cm}
 \title{Find drug types based on ICD-9-CM.}
 \usage{
-od_drug_types_icd9cm(data, diag_ecode_col)
+od_drug_types_icd9cm(data, diag_col, ecode_col)
 }
 \arguments{
 \item{data:}{input data}
