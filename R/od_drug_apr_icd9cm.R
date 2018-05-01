@@ -3,8 +3,8 @@
 #' Find any drug and other opioids from ICD-9-CM
 #'
 #' @param data: input data
-#' @param diag_ecode_col: indices of principal diagnosis and first E code
-#'
+#' @param diag_col: indices of principal diagnosis
+#' @param ecode_col: indices of ecodes
 #' @return any_drug, any_opioid, non_heroin_opioid, and
 #'   heroin
 #' @export
