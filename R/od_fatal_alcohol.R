@@ -4,6 +4,7 @@
 #'
 #' @param data input data
 #' @param underly_col underlying column index
+#' @param var_name propose a name for the new alcohol variable. The default is "alcohol"
 #'
 #' @return alcohol
 #' @export
