@@ -4,12 +4,14 @@
 \alias{od_fatal_alcohol}
 \title{Find any alcohol poisoning.}
 \usage{
-od_fatal_alcohol(data, underly_col)
+od_fatal_alcohol(data, underly_col, var_name = "alcohol")
 }
 \arguments{
 \item{data}{input data}
 
 \item{underly_col}{underlying column index}
+
+\item{var_name}{propose a name for the new alcohol variable. The default is "alcohol"}
 }
 \value{
 alcohol
