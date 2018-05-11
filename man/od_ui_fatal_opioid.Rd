@@ -4,7 +4,7 @@
 \alias{od_ui_fatal_opioid}
 \title{Find any opioid.}
 \usage{
-od_ui_fatal_opioid(data, underly_col, mult_col)
+od_ui_fatal_opioid(data, underly_col, mult_col, var_name = "ui_opioid")
 }
 \arguments{
 \item{data}{input data}
@@ -12,6 +12,8 @@ od_ui_fatal_opioid(data, underly_col, mult_col)
 \item{underly_col}{underlying column index}
 
 \item{mult_col}{multiple causes column indices}
+
+\item{var_name}{propose a name for the new alcohol variable. The default is "ui_opioid"}
 }
 \value{
 cdc_any_drugs, cdc_any_opioid,
@@ -21,4 +23,6 @@ Using CDC definitions.
 }
 \examples{
 to be added
+
+
 }
