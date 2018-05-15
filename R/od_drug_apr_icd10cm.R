@@ -21,7 +21,7 @@ od_drug_apr_icd10cm <- function(data, diag_ecode_col) {
 
   non_heroin_opioid_icd10cm_ <- "(T40[0234].|T406[09])(1|2|3|4)(A|$)"
 
-  heroin_icd10cm_ <- "T401.(1|2|3|4)(A|D|$)"
+  heroin_icd10cm_ <- "T401.(1|2|3|4)(A|$)"
 
 
   data %>% mutate(any_drug = od_create_diag(., expr = drugs_icd10cm_,
