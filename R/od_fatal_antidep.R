@@ -1,19 +1,18 @@
-#' Find any Antidepressant poisoning.
+#' Find andidepressant poisoning
 #'
-#' Find any drug based on CDC definitions
 #'
 #' @param data input data
-#' @param underly_col underlying column index
-#' @param var_name propose a name for the new Antidepressant variable. The default is "antidepressant"
+#' @param underly_col underlying cause column index
+#' @param mult_col multicause index
 #'
 #' @return antidepressant
 #' @export
 #'
 #' @examples to be added
-od_fatal_antidep <- function(data, underly_col, var_name = "antidepressant") {
-	var_name <- enquo(var_name)
-	var_name <- quo_name(var_name)
-	data %>% mutate(!!var_name :=  od_create_diag(., expr = "T43[012]",
-																								colvec = underly_col))
+#'
+od_fatal_antidep <- function(data, underly_col, mult_col) {
+	data %>%
+		mutate(any_drugs = od_create_diag(., expr = "X4[0-4]|X6[0-4]|X85|Y1[0-4]", colvec = underly_col)) %>%
+		mutate(antidepressant = od_create_cond_diag(., expr = "T43[012]", colvec = mult_col, cond.var = any_drugs)) %>%
+		select(-any_drugs)
 }
-

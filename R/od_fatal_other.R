@@ -2,24 +2,19 @@
 #' excluding opioid, benzo, antidepressant,
 #' psycho-stimulant, cocaine
 #'
-#' Find any drug based on CDC definitions
 #'
 #' @param data input data
-#' @param underly_col causes column index
-#' @param cond.var conditional variable
-#' @param var_name propose a name for the new other variable. The default is "other"
+#' @param underly_col underlying cause column index
+#' @param mult_col multicause index
 #'
-#' @return other
+#' @return other_drugs
 #' @export
 #'
 #' @examples to be added
-od_fatal_other <- function(data, underly_col, cond.var = cdc_any_drugs, var_name = "other") {
-	var_name <- enquo(var_name)
-	var_name <- quo_name(var_name)
+#'
+od_fatal_other <- function(data, underly_col, mult_col) {
 	data %>%
-		mutate(!!var_name :=
-					 	od_create_cond_diag(.,
-					 											expr = "^(?!(T40[0-456]|T424|T43[0126]))",
-					 											colvec = underly_col,
-					 											cond.var = cond.var))
+		mutate(any_drugs = od_create_diag(., expr = "X4[0-4]|X6[0-4]|X85|Y1[0-4]", colvec = underly_col)) %>%
+		mutate(other_drugs = od_create_cond_diag(., expr = "^(?!(T40[0-456]|T424|T43[0126]))", colvec = mult_col, cond.var = any_drugs)) %>%
+		select(-any_drugs)
 }
