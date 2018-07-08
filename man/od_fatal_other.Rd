@@ -6,24 +6,24 @@
 excluding opioid, benzo, antidepressant,
 psycho-stimulant, cocaine}
 \usage{
-od_fatal_other(data, underly_col, cond.var = cdc_any_drugs,
-  var_name = "other")
+od_fatal_other(data, underly_col, mult_col)
 }
 \arguments{
 \item{data}{input data}
 
-\item{underly_col}{causes column index}
+\item{underly_col}{underlying cause column index}
 
-\item{cond.var}{conditional variable}
-
-\item{var_name}{propose a name for the new other variable. The default is "other"}
+\item{mult_col}{multicause index}
 }
 \value{
-other
+other_drugs
 }
 \description{
-Find any drug based on CDC definitions
+Find other drug poisonings.
+excluding opioid, benzo, antidepressant,
+psycho-stimulant, cocaine
 }
 \examples{
 to be added
+
 }

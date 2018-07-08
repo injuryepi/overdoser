@@ -2,23 +2,24 @@
 % Please edit documentation in R/od_fatal_antidep.R
 \name{od_fatal_antidep}
 \alias{od_fatal_antidep}
-\title{Find any Antidepressant poisoning.}
+\title{Find andidepressant poisoning}
 \usage{
-od_fatal_antidep(data, underly_col, var_name = "antidepressant")
+od_fatal_antidep(data, underly_col, mult_col)
 }
 \arguments{
 \item{data}{input data}
 
-\item{underly_col}{underlying column index}
+\item{underly_col}{underlying cause column index}
 
-\item{var_name}{propose a name for the new Antidepressant variable. The default is "antidepressant"}
+\item{mult_col}{multicause index}
 }
 \value{
 antidepressant
 }
 \description{
-Find any drug based on CDC definitions
+Find andidepressant poisoning
 }
 \examples{
 to be added
+
 }

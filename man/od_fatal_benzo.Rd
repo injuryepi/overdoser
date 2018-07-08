@@ -2,23 +2,24 @@
 % Please edit documentation in R/od_fatal_benzo.R
 \name{od_fatal_benzo}
 \alias{od_fatal_benzo}
-\title{Find any Benzodiazepines poisoning.}
+\title{Find any Benzodiazepines poisoning}
 \usage{
-od_fatal_benzo(data, underly_col, var_name = "benzo")
+od_fatal_benzo(data, underly_col, mult_col)
 }
 \arguments{
 \item{data}{input data}
 
-\item{underly_col}{underlying column index}
+\item{underly_col}{underlying cause column index}
 
-\item{var_name}{propose a name for the new Benzo variable. The default is "benzo"}
+\item{mult_col}{multicause index}
 }
 \value{
 benzo
 }
 \description{
-Find any drug based on CDC definitions
+Find any Benzodiazepines poisoning
 }
 \examples{
 to be added
+
 }
