@@ -15,6 +15,6 @@
 od_fatal_other <- function(data, underly_col, mult_col) {
 	data %>%
 		mutate(any_drugs = od_create_diag(., expr = "X4[0-4]|X6[0-4]|X85|Y1[0-4]", colvec = underly_col)) %>%
-		mutate(other_drugs = od_create_cond_diag(., expr = "^(?!(X4[0-4]|X6[0-4]|X85|Y1[0-4]|T40[0-456]|T424|T43[0126]|$))", colvec = mult_col, cond.var = any_drugs)) %>%
+		mutate(other_drugs = od_create_cond_diag(., expr = "^(?!(X4[0-4]|X6[0-4]|X85|Y1[0-4]|T40[0-456]|T424|T43[0126]|$))(T3[6-9]|T4[0-9]|T50)", colvec = mult_col, cond.var = any_drugs)) %>%
 		select(-any_drugs)
 }
