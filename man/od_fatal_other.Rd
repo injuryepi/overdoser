@@ -3,8 +3,8 @@
 \name{od_fatal_other}
 \alias{od_fatal_other}
 \title{Find other drug poisonings.
-excluding opioid, benzo, antidepressant,
-psycho-stimulant, cocaine}
+excluding opioid, sedative, antidepressant,
+psycho-stimulant, cocaine, and alcohol}
 \usage{
 od_fatal_other(data, underly_col, mult_col)
 }
@@ -20,8 +20,8 @@ other_drugs
 }
 \description{
 Find other drug poisonings.
-excluding opioid, benzo, antidepressant,
-psycho-stimulant, cocaine
+excluding opioid, sedative, antidepressant,
+psycho-stimulant, cocaine, and alcohol
 }
 \examples{
 to be added
