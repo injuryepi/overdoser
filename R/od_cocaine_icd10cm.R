@@ -1,4 +1,4 @@
-#' Find cocain based on ICD-10-CM.
+#' Find cocaine based on ICD-10-CM.
 #'
 #' Find cocaine based on ICD-10-CM.
 #'
