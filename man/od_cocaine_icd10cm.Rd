@@ -2,7 +2,7 @@
 % Please edit documentation in R/od_cocaine_icd10cm.R
 \name{od_cocaine_icd10cm}
 \alias{od_cocaine_icd10cm}
-\title{Find cocain based on ICD-10-CM.}
+\title{Find cocaine based on ICD-10-CM.}
 \usage{
 od_cocaine_icd10cm(data, diag_ecode_col)
 }
