@@ -12,8 +12,7 @@
 #' @export
 #'
 #' @examples to be added
-od_diag9_10cm <- function(data, diag_ecode_col, expr9,
-													 expr10, var_name, date) {
+od_diag9_10cm <- function(data, diag_ecode_col, expr9, expr10, var_name, date) {
 
 	date <- enquo(date)
 	expr9 <- enquo(expr9)
